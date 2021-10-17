@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness</title>
 </head>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <style>
     /* CSS Reset */
     body{
+        font-family: 'Space Mono', monospace;
         color: white;
         margin: 0px;
         padding: 0px;
@@ -17,46 +19,89 @@
     }
     .left{
         display: inline-block;
-        border: 2px solid red;
         position: absolute;
-        left: 34px;
-        top: 20px;
+        left: 14px;
+        top: -19px;
+    }
+    .left img{
+        position:fixed;
+        width: 134px; 
+    }
+    .left div{
+        text-align: center;
     }
     .mid{
         display: block;
         width: 50%;
         margin: 20px auto;
-        border: 2px solid green;
+        padding: 0px;
     }
     .right{
         position: absolute;
         right: 34px;
         top: 20px;
         display: inline-block;
-        border: 2px solid yellow;
     }
     .navbar{
         display: inline-block;
     }
     .navbar li{
         display: inline-block;
-        font-size: 25px;
+        font-size: 20px;
+        padding: 0px;
     }
     .navbar li a{
         color: white;
-        text-decoration: none;
-        padding: 34px;
+        text-decoration: none; 
+        padding: 20px;
     }
     .navbar li a:hover, .navbar li a.active{
         text-decoration: underline;
         color:grey;
     }
+    .btn{
+        margin: 0px 9px;
+        background-color: black;
+        color: white;
+        padding: 4px 14px;
+        border: 2px solid gray;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .container{
+        border: 2px solid white;
+        margin: 106px 80px;
+        padding: 75px;
+        width: 33%;
+        border-radius: 28px;
+    }
+    .form-group input{
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        display: block;
+        margin: 20px;
+        width: 500px;
+        border: 2px solid black;
+        margin: 11px auto;
+        font-size: 25px;
+        border-radius: 10px;
+    }
+    .container button{
+        display: block;
+        width: 30%;
+        margin: auto;
+    }
+    .container h2{
+        text-align: center;
+    }
+    
 </style>
 <body>
     <header class="header">
         <!-- left box for logo -->
         <div class="left">
-            
+            <img src="img/logo.png" alt="">
         </div>
         <!-- mid box for logo -->
         <div class="mid">
@@ -69,8 +114,27 @@
         </div>
         <!-- right box for logo -->
         <div class="right">
-            i am right
+            <button class="btn">Call Us Now!</button>
+            <button class="btn">Email Us!</button>
         </div>
-    </header>    
+    </header> 
+    <div class="container">
+        <h2>Join the best gym of Delhi now!</h2>
+        <form action="noaction.php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter Your Name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter Your Age">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter Your Gender">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter Your Locality">
+            </div>
+            <button class="btn">Submit</button>
+        </form>
+    </div>   
 </body>
 </html>
